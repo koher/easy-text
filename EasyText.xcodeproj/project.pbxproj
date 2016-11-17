@@ -1,0 +1,220 @@
+// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {};
+    objectVersion = 46;
+    rootObject = __RootObject_;
+    objects = {
+        __RootObject_ = {
+            isa = PBXProject;
+            attributes = {LastUpgradeCheck = 9999;};
+            buildConfigurationList = ___RootConfs_;
+            compatibilityVersion = 'Xcode 3.2';
+            developmentRegion = English;
+            hasScannedForEncodings = 0;
+            knownRegions = (en);
+            mainGroup = ___RootGroup_;
+            productRefGroup = ____Products_;
+            projectDirPath = '';
+            projectRoot = '';
+            targets = (______Target_EasyText, ______Target_EasyTextTests);
+        };
+        '__PBXFileRef_Package.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Package.swift';
+            sourceTree = '<group>';
+        };
+        ___RootGroup_ = {
+            isa = PBXGroup;
+            children = ('__PBXFileRef_Package.swift', _____Configs_, _____Sources_,  Dependencies_, _______Tests_, ____Products_);
+            sourceTree = '<group>';
+        };
+        _______Group_EasyText = {
+            isa = PBXGroup;
+            name = 'EasyText';
+            path = 'Sources';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Sources/EasyText.swift');
+        };
+        '__PBXFileRef_Sources/EasyText.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'EasyText.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_EasyText = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_EasyText;
+            buildPhases = (CompilePhase_EasyText, ___LinkPhase_EasyText);
+            buildRules = ();
+            dependencies = ();
+            name = 'EasyText';
+            productName = EasyText;
+            productReference = _____Product_EasyText;
+            productType = 'com.apple.product-type.framework';
+        };
+        _____Product_EasyText = {
+            isa = PBXFileReference;
+            explicitFileType = 'wrapper.framework';
+            path = 'EasyText.framework';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_EasyText = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Sources/EasyText.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Sources/EasyText.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/EasyText.swift';
+        };
+        ___LinkPhase_EasyText = {
+            isa = PBXFrameworksBuildPhase;
+            files = ();
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _______Confs_EasyText = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_EasyText, _ReleaseConf_EasyText);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_EasyText = {
+            isa = XCBuildConfiguration;
+            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'EasyText.xcodeproj/EasyText_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; PRODUCT_BUNDLE_IDENTIFIER = 'EasyText'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited)'; };
+            name = Debug;
+        };
+        _ReleaseConf_EasyText = {
+            isa = XCBuildConfiguration;
+            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'EasyText.xcodeproj/EasyText_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; PRODUCT_BUNDLE_IDENTIFIER = 'EasyText'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited)'; };
+            name = Release;
+        };
+        __Dependency_EasyText = {
+            isa = PBXTargetDependency;
+            target = ______Target_EasyText;
+        };
+        _______Group_EasyTextTests = {
+            isa = PBXGroup;
+            name = 'EasyTextTests';
+            path = 'Tests/EasyTextTests';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Tests/EasyTextTests/EasyTextTests.swift');
+        };
+        '__PBXFileRef_Tests/EasyTextTests/EasyTextTests.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'EasyTextTests.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_EasyTextTests = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_EasyTextTests;
+            buildPhases = (CompilePhase_EasyTextTests, ___LinkPhase_EasyTextTests);
+            buildRules = ();
+            dependencies = (__Dependency_EasyText);
+            name = 'EasyTextTests';
+            productName = EasyTextTests;
+            productReference = _____Product_EasyTextTests;
+            productType = 'com.apple.product-type.bundle.unit-test';
+        };
+        _____Product_EasyTextTests = {
+            isa = PBXFileReference;
+            explicitFileType = 'compiled.mach-o.wrapper.cfbundle';
+            path = 'EasyTextTests.xctest';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_EasyTextTests = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Tests/EasyTextTests/EasyTextTests.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Tests/EasyTextTests/EasyTextTests.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Tests/EasyTextTests/EasyTextTests.swift';
+        };
+        ___LinkPhase_EasyTextTests = {
+            isa = PBXFrameworksBuildPhase;
+            files = (_LinkFileRef_EasyText_via_EasyTextTests);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _LinkFileRef_EasyText_via_EasyTextTests = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_EasyText;
+        };
+        _______Confs_EasyTextTests = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_EasyTextTests, _ReleaseConf_EasyTextTests);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_EasyTextTests = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '@loader_path/../Frameworks'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'EasyText.xcodeproj/EasyTextTests_Info.plist'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; EMBEDDED_CONTENT_CONTAINS_SWIFT = 'YES'; OTHER_LDFLAGS = '$(inherited)'; SWIFT_VERSION = '3.0'; };
+            name = Debug;
+        };
+        _ReleaseConf_EasyTextTests = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '@loader_path/../Frameworks'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'EasyText.xcodeproj/EasyTextTests_Info.plist'; EMBEDDED_CONTENT_CONTAINS_SWIFT = 'YES'; OTHER_LDFLAGS = '$(inherited)'; SWIFT_VERSION = '3.0'; };
+            name = Release;
+        };
+        __Dependency_EasyTextTests = {
+            isa = PBXTargetDependency;
+            target = ______Target_EasyTextTests;
+        };
+        '__PBXFileRef_EasyText.xcodeproj/Configs/Project.xcconfig' = {
+            isa = PBXFileReference;
+            lastKnownFileType = text.xcconfig;
+            path = 'EasyText.xcodeproj/Configs/Project.xcconfig';
+            sourceTree = '<group>';
+        };
+        _____Configs_ = {
+            isa = PBXGroup;
+            children = ('__PBXFileRef_EasyText.xcodeproj/Configs/Project.xcconfig');
+            name = Configs;
+            sourceTree = '<group>';
+        };
+        _____Sources_ = {
+            isa = PBXGroup;
+            children = (_______Group_EasyText);
+            name = Sources;
+            sourceTree = '<group>';
+        };
+        _______Tests_ = {
+            isa = PBXGroup;
+            children = (_______Group_EasyTextTests);
+            name = Tests;
+            sourceTree = '<group>';
+        };
+       TestProducts_ = {
+            isa = PBXGroup;
+            children = (_____Product_EasyTextTests);
+            name = Tests;
+            sourceTree = '<group>';
+        };
+        ____Products_ = {
+            isa = PBXGroup;
+            children = (TestProducts_, _____Product_EasyText);
+            name = Products;
+            sourceTree = '<group>';
+        };
+        _______Debug_ = {
+            isa = XCBuildConfiguration;
+            baseConfigurationReference = '__PBXFileRef_EasyText.xcodeproj/Configs/Project.xcconfig';
+            buildSettings = {};
+            name = Debug;
+        };
+        _____Release_ = {
+            isa = XCBuildConfiguration;
+            baseConfigurationReference = '__PBXFileRef_EasyText.xcodeproj/Configs/Project.xcconfig';
+            buildSettings = {};
+            name = Release;
+        };
+        ___RootConfs_ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (_______Debug_, _____Release_);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+    };
+}
