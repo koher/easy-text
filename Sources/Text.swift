@@ -17,6 +17,22 @@ public struct Text {
     public var count: Int {
         return characters.count
     }
+    
+    public var startIndex: Int {
+        return characters.startIndex
+    }
+    
+    public var endIndex: Int {
+        return characters.endIndex
+    }
+    
+    public var first: Character? {
+        return characters.first
+    }
+    
+    public var last: Character? {
+        return characters.last
+    }
 }
 
 extension Text {
