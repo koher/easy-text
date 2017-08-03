@@ -1,8 +1,12 @@
-public struct TextSlice {
+public struct TextSlice: TextProtocol {
     internal var characters: ArraySlice<Character>
     
     internal init(_ characters: ArraySlice<Character>) {
         self.characters = characters
+    }
+    
+    public init(_ text: Text) {
+        self.init(ArraySlice(text.characters))
     }
     
     public subscript(index: Int) -> Character {
@@ -88,5 +92,19 @@ extension TextSlice: CustomStringConvertible {
 extension TextSlice: CustomDebugStringConvertible {
     public var debugDescription: String {
         return "TextSlice(\(description.debugDescription))"
+    }
+}
+
+extension TextSlice: ExpressibleByStringLiteral {
+    public init(stringLiteral value: String) {
+        self.init(Text(value))
+    }
+    
+    public init(unicodeScalarLiteral value: String) {
+        self.init(Text(value))
+    }
+    
+    public init(extendedGraphemeClusterLiteral value: String) {
+        self.init(Text(value))
     }
 }

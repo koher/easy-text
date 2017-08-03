@@ -1,5 +1,5 @@
-public struct Text {
-    fileprivate var characters: [Character]
+public struct Text: TextProtocol {
+    internal var characters: [Character]
     
     public init(_ string: String) {
         characters = Array(string.characters)
