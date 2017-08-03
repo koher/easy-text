@@ -1,23 +1,24 @@
 # EasyText
 
-_EasyText_ provides `Text`, which makes it easy to use character strings in Swift and is useful especially when performance is not important.
+_EasyText_ provides `Text`, which makes it easy to use character strings in Swift. `Text` also provides APIs with **reasonable performance**: *O(n)* for creating an instance and *O(1)* for most operations, `subscript`, `count`, `first`, `last` and so on.
 
 ```swift
-var text: Text = "ABCDEFG"
+var text: Text = "👪ABCDEFG👍"
 
-print(text[0]) // "A"
-print(text[1...3]) // "BCD"
-print(text.count) // 7
+print(text[0]) // "👪"
+print(text[1...3]) // "ABC"
+print(text.last!) // "👍"
+print(text.count) // 9
 
-text[0] = "Z"
-print(text[0]) // "Z"
+text[0] = "😃"
+print(text[0]) // "😃"
 
 for c in text {
-    print(c) // "Z", "B", "C", "D", "E", "F", "G"
+    print(c) // "😃", "A", "B", "C", "D", "E", "F", "G", "👍"
 }
 
 let string = String(text)
-print(string) // "ZBCDEFG"
+print(string) // "😃ABCDEFG👍"
 ```
 
 ## License
