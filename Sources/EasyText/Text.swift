@@ -2,7 +2,7 @@ public struct Text: TextProtocol {
     internal var characters: [Character]
     
     public init(_ string: String) {
-        characters = Array(string.characters)
+        characters = Array(string)
     }
     
     public subscript(index: Int) -> Character {
