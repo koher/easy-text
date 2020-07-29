@@ -83,12 +83,4 @@ extension TextSlice: ExpressibleByStringLiteral {
     public init(stringLiteral value: String) {
         self.init(Text(value))
     }
-    
-    public init(unicodeScalarLiteral value: String) {
-        self.init(Text(value))
-    }
-    
-    public init(extendedGraphemeClusterLiteral value: String) {
-        self.init(Text(value))
-    }
 }
