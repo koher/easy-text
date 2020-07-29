@@ -1,5 +1,5 @@
 public struct TextSlice: TextProtocol {
-    internal var characters: ArraySlice<Character>
+    internal private(set) var characters: ArraySlice<Character>
     
     internal init(_ characters: ArraySlice<Character>) {
         self.characters = characters
@@ -8,6 +8,16 @@ public struct TextSlice: TextProtocol {
     public init(_ text: Text) {
         self.init(ArraySlice(text.characters))
     }
+}
+
+extension TextSlice: Sequence {
+    public func makeIterator() -> IndexingIterator<ArraySlice<Character>> {
+        return characters.makeIterator()
+    }
+}
+
+extension TextSlice: Collection {
+    public typealias SubSequence = TextSlice
     
     public subscript(index: Int) -> Character {
         get {
@@ -17,11 +27,7 @@ public struct TextSlice: TextProtocol {
             characters[index] = newValue
         }
     }
-    
-    public var count: Int {
-        return characters.count
-    }
-    
+
     public var startIndex: Int {
         return characters.startIndex
     }
@@ -29,17 +35,17 @@ public struct TextSlice: TextProtocol {
     public var endIndex: Int {
         return characters.endIndex
     }
-    
-    public var first: Character? {
-        return characters.first
-    }
-    
-    public var last: Character? {
-        return characters.last
-    }
 }
 
-extension TextSlice {
+extension TextSlice: RandomAccessCollection {}
+
+extension TextSlice: MutableCollection {}
+
+extension TextSlice: RangeReplaceableCollection {
+    public init() {
+        self.init([])
+    }
+    
     public subscript(bounds: Range<Int>) -> TextSlice {
         get {
             return TextSlice(characters[bounds])
@@ -56,12 +62,6 @@ extension TextSlice {
         set {
             characters[bounds] = newValue.characters
         }
-    }
-}
-
-extension TextSlice: Sequence {
-    public func makeIterator() -> IndexingIterator<ArraySlice<Character>> {
-        return characters.makeIterator()
     }
 }
 
