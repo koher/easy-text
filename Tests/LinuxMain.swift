@@ -1,6 +1,8 @@
 import XCTest
-@testable import EasyTextTests
 
-XCTMain([
-     testCase(EasyTextTests.allTests),
-])
+import EasyTextTests
+
+var tests = [XCTestCaseEntry]()
+tests += EasyTextTests.__allTests()
+
+XCTMain(tests)
