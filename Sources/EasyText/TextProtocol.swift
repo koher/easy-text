@@ -9,6 +9,4 @@ public protocol TextProtocol: Sequence, CustomStringConvertible, CustomDebugStri
 
     subscript(bounds: Range<Int>) -> TextSlice { get set }
     subscript(bounds: ClosedRange<Int>) -> TextSlice { get set }
-    subscript(bounds: CountableRange<Int>) -> TextSlice { get set }
-    subscript(bounds: CountableClosedRange<Int>) -> TextSlice { get set }
 }

@@ -57,24 +57,6 @@ extension TextSlice {
             characters[bounds] = newValue.characters
         }
     }
-    
-    public subscript(bounds: CountableRange<Int>) -> TextSlice {
-        get {
-            return TextSlice(characters[bounds])
-        }
-        set {
-            characters[bounds] = newValue.characters
-        }
-    }
-    
-    public subscript(bounds: CountableClosedRange<Int>) -> TextSlice {
-        get {
-            return TextSlice(characters[bounds])
-        }
-        set {
-            characters[bounds] = newValue.characters
-        }
-    }
 }
 
 extension TextSlice: Sequence {
@@ -94,6 +76,8 @@ extension TextSlice: CustomDebugStringConvertible {
         return "TextSlice(\(description.debugDescription))"
     }
 }
+
+extension TextSlice: Equatable, Hashable {}
 
 extension TextSlice: ExpressibleByStringLiteral {
     public init(stringLiteral value: String) {

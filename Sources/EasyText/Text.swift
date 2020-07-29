@@ -59,24 +59,6 @@ extension Text {
             characters[bounds] = newValue.characters
         }
     }
-
-    public subscript(bounds: CountableRange<Int>) -> TextSlice {
-        get {
-            return TextSlice(characters[bounds])
-        }
-        set {
-            characters[bounds] = newValue.characters
-        }
-    }
-    
-    public subscript(bounds: CountableClosedRange<Int>) -> TextSlice {
-        get {
-            return TextSlice(characters[bounds])
-        }
-        set {
-            characters[bounds] = newValue.characters
-        }
-    }
 }
 
 extension Text: Sequence {
@@ -97,17 +79,7 @@ extension Text: CustomDebugStringConvertible {
     }
 }
 
-extension Text: Equatable {}
-
-public func ==(lhs: Text, rhs: Text) -> Bool {
-    return lhs.characters == rhs.characters
-}
-
-extension Text: Hashable {
-    public var hashValue: Int {
-        return self.description.hashValue
-    }
-}
+extension Text: Equatable, Hashable {}
 
 extension Text: ExpressibleByStringLiteral {
     public init(stringLiteral value: String) {
